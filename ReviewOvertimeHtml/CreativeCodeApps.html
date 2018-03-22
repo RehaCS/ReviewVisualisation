@@ -26,74 +26,47 @@
 
 	<h2 class="text-center my-5">Number of Reviews overtime</h2>
 
-		<div class="my-10">
+	<div id="chartContainer" class="Creative">
 		<script type="text/javascript">
 
-			 var locations = [
-			     {color: 'orange', title: 'Creative Code Apps'},
-				 // {color: 'yellow', title: 'Air Balooncs'},
-				 // {color: 'blue', title: 'Disco Stack F'},
-				 // {color: 'aqua', title: 'Messy Room'},
-				 // {color: 'red', title: 'Royal Haircut'},
-				 ];
+			var width = 600;
+			var height = 400;
+			
+			var svg = dimple.newSvg("#chartContainer",600,400);
+			svg.append("text")
+		        .attr("x", (width / 2))             
+		        .attr("y", 15)
+		        .attr("text-anchor", "middle")  
+		        .style("font-size", "16px")
+		        .style("font-family", "arial")
+		        .style("text-decoration", "none")  
+		        .text("Creative Code App F");
 
-			 $(document).ready(function () {
-			 	for (var i = 0; i < locations.length; i++) {
-			 		$('body').append('<div id="charts-' + i + '"></div>');
-			 	}
+			d3.csv("creativeCodeApps.csv", function (data) {
 
-			 	d3.queue() //Load multiple files using queue
-					.defer(d3.csv, 'CSVFake/creativeCodeApps.csv')
-					// .defer(d3.csv, 'CSVFake/air.balooncs3F.csv')
-					// .defer(d3.csv, 'CSVFake/discoStackF.csv')
-					// .defer(d3.csv, 'CSVFake/messyRoom.csv')
-					// .defer(d3.csv, 'CSVFake/royalHaircut.csv')
-					.await(readCsv); //Wait till all files loaded then rum readCSV func
+				var myChart = new dimple.chart(svg, data);
+				
+				myChart
+					.setBounds(75,30,480,330); //Length width and location
+				
+				myChart
+				 	.addMeasureAxis("x","NumberOfReviews");
 
-			 	function readCsv(error, creativeCodeApps //airBallooncs, //discoStack, messyRoom, royalHaircut
-			 		) {
-			 	    var datasets = [creativeCodeApps //, airBallooncs, discoStack, messyRoom, royalHaircut
-			 	    ];
+				var y = myChart.addCategoryAxis("y", "ReviewDate");
+				y.addOrderRule("ReviewDate");
 
-			 	    for (var i = 0; i < locations.length; i++) {
+				myChart.defaultColors = [new dimple.color("orange")]; // You can use #RGB here
 
-			 	        console.log(i);
+				
+				myChart.addSeries(null, dimple.plot.bar);
+				
+				myChart.draw(1000);
+			});
 
-			 	        var svg = dimple.newSvg('#charts-' + i,600,400);
-			 			svg.append("text")
-			 	        .attr("x", (450 / 2))
-			 	        .attr("y", 15)
-			 	        .attr("text-anchor", "middle")
-			 	        .style("font-size", "12px")
-			 	        .style("font-family", "arial")
-			 	        .style("text-decoration", "none")
-			 	        .text(locations[i]['title']);
-
-			 			var myChart = new dimple.chart(svg, datasets[i]);
-
-			 			myChart
-			 				.setBounds(75,30,480,330); //Length width and location
-
-			 			myChart
-			 			 	.addMeasureAxis("x","NumberOfReviews");
-
-			 			var y = myChart.addCategoryAxis("y", "ReviewDate");
-			 			y.addOrderRule("ReviewDate");
-
-			 			myChart.defaultColors = [new dimple.color(locations[i]['color'])]; // You can use #RGB here
-
-
-			 			myChart.addSeries(null, dimple.plot.bar);
-
-			 			myChart.draw(1000);
-					}
-				}
-
-
-			 });
 
 		</script>
-		</div>
+	</div>
+
 
 </body>
 
