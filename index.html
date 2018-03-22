@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Review Visualisations</title>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- favicon -->
+  <link rel="shorcut icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container-fluid">
+
+    <!-- Placeholder for navBar which is loaded with jQuery -->
+    <div id=nav-placeholder></div>
+    
+    <div class="jumbotron mt-1">
+      <h1 class="display-4 text-center">Visualizing fraudulent data!</h1>
+      <p class="lead">This website will aim to to help <strong>you</strong> to diffrentiate between benign and fraudulent reviews in the Google Play Store! You will find a series of visualisations which will show you how real and fake reviews differ! Explore and enjoy! 
+    </div>
+
+<!-- Columns and rows with thumbnails and clickable tiles -->
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <a href="./reviewOvertime.html" class="text-dark">
+          <div class="media">
+            <img class="align-self-start mr-3 mb-2 img-thumbnail img-fluid" style="width: 50%;" src="./images/reviewOvertime.png" alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="mt-0">Number of Reviews Overtime</h5>
+              <p>Visualizations which show the number of reviews posted on a particar days.</p> 
+            </div>
+          </div>
+        </a>
+      </div>
+      
+      <div class="col-sm-12 col-md-6">
+        <a href="./ratingDistribution.html" class="text-dark">
+          <div class="media">
+            <img class="align-self-start mr-3 mb-2 img-thumbnail img-fluid" style="width: 50%;" src="./images/ratingDistribution.png" alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="mt-0">Distribution of Ratings</h5>
+              <p>Visualizations which show the distribution of rating for a particular app.</p> 
+            </div>
+          </div>
+        </a>
+      </div>
+      
+      <div class="w-100"></div>
+      
+      <div class="col-sm-12 col-md-6">
+        <a href="./avgComLength.html" class="text-dark">
+          <div class="media">
+            <img class="align-self-start mr-3 mb-2 img-thumbnail img-fluid" style="width: 50%;" src="./images/avgComLength.png" alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="mt-0">Average Length of Comment</h5>
+              <p>Visualizations which show the average length of comments for a sample of benign apps and fraudulent apps</p> 
+            </div>
+          </div>
+        </a>
+      </div>
+      
+      <div class="col-sm-12 col-md-6">
+        <a href="./wordCloud.html" class="text-dark">
+          <div class="media">
+            <img class="align-self-start mr-3 mb-2 img-thumbnail img-fluid" style="width: 50%;" src="./images/wordCloud.png" alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="mt-0">Word Cloud</h5>
+              <p>Word Cloud visualizations which show the most frequent words used in benign and fraudulent apps</p> 
+            </div>
+          </div>
+        </a>
+      </div>
+    
+    </div>
+  
+  </div>
+
+  <!-- loads navbar.js-->
+  <script src="./navBar/navBar.js" type="text/javascript"> </script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Review Visualisations</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<script src="http://d3js.org/d3.v4.min.js"></script>
+	<script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js">
+	</script>
+	<script src="./navBar/navBar.js"></script>
+
+</head>
+
+<body>
+
+	<!-- Placeholder for navBar which is loaded with jQuery -->
+    <div id=nav-placeholder></div>
+
+	<h2 class="text-center my-5">Number of Reviews overtime</h2>
+
+		<div class="my-10">
+		<script type="text/javascript">
+
+			 var locations = [
+			     {color: 'orange', title: 'Creative Code Apps'},
+				 // {color: 'yellow', title: 'Air Balooncs'},
+				 // {color: 'blue', title: 'Disco Stack F'},
+				 // {color: 'aqua', title: 'Messy Room'},
+				 // {color: 'red', title: 'Royal Haircut'},
+				 ];
+
+			 $(document).ready(function () {
+			 	for (var i = 0; i < locations.length; i++) {
+			 		$('body').append('<div id="charts-' + i + '"></div>');
+			 	}
+
+			 	d3.queue() //Load multiple files using queue
+					.defer(d3.csv, 'CSVFake/creativeCodeApps.csv')
+					// .defer(d3.csv, 'CSVFake/air.balooncs3F.csv')
+					// .defer(d3.csv, 'CSVFake/discoStackF.csv')
+					// .defer(d3.csv, 'CSVFake/messyRoom.csv')
+					// .defer(d3.csv, 'CSVFake/royalHaircut.csv')
+					.await(readCsv); //Wait till all files loaded then rum readCSV func
+
+			 	function readCsv(error, creativeCodeApps //airBallooncs, //discoStack, messyRoom, royalHaircut
+			 		) {
+			 	    var datasets = [creativeCodeApps //, airBallooncs, discoStack, messyRoom, royalHaircut
+			 	    ];
+
+			 	    for (var i = 0; i < locations.length; i++) {
+
+			 	        console.log(i);
+
+			 	        var svg = dimple.newSvg('#charts-' + i,600,400);
+			 			svg.append("text")
+			 	        .attr("x", (450 / 2))
+			 	        .attr("y", 15)
+			 	        .attr("text-anchor", "middle")
+			 	        .style("font-size", "12px")
+			 	        .style("font-family", "arial")
+			 	        .style("text-decoration", "none")
+			 	        .text(locations[i]['title']);
+
+			 			var myChart = new dimple.chart(svg, datasets[i]);
+
+			 			myChart
+			 				.setBounds(75,30,480,330); //Length width and location
+
+			 			myChart
+			 			 	.addMeasureAxis("x","NumberOfReviews");
+
+			 			var y = myChart.addCategoryAxis("y", "ReviewDate");
+			 			y.addOrderRule("ReviewDate");
+
+			 			myChart.defaultColors = [new dimple.color(locations[i]['color'])]; // You can use #RGB here
+
+
+			 			myChart.addSeries(null, dimple.plot.bar);
+
+			 			myChart.draw(1000);
+					}
+				}
+
+
+			 });
+
+		</script>
+		</div>
+
+</body>
+
+</html>
