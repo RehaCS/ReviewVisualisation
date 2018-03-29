@@ -30,39 +30,39 @@
 	<div id="chartContainer" class="Creative">
 		<script type="text/javascript">
 
-			var width = 600;
-			var height = 400;
-			
-			var svg = dimple.newSvg("#chartContainer",600,400);
-			svg.append("text")
-		        .attr("x", (width / 2))             
-		        .attr("y", 15)
-		        .attr("text-anchor", "middle")  
-		        .style("font-size", "16px")
-		        .style("font-family", "arial")
-		        .style("text-decoration", "none")  
-		        .text("Creative Code App F");
 
-			d3.csv("./CSVFake/creativeCodeApps.csv", function (data) {
+		d3.csv("./CSVFake/air.balooncs3F.csv", function (data) {
 
-				var myChart = new dimple.chart(svg, data);
-				
-				myChart
-					.setBounds(75,30,480,330); //Length width and location
-				
-				myChart
-				 	.addMeasureAxis("x","NumberOfReviews");
+			var colour = d3.scale.linear()
+				.range(["red", "green", "blue"]);
+		
+			var canvas = d3.select("body")
+				.append("svg")
+				.attr("width", 500)
+				.attr("height", 500)
+				.append("g")
+				.attr("transform", "translate(0,50)");
 
-				var y = myChart.addCategoryAxis("y", "ReviewDate");
-				y.addOrderRule("ReviewDate");
+			canvas.selectAll("rect")
+				.data(data)
+				.enter()
+					.append("rect")
+					.attr("width", function (d) { return d.NumberOfReviews * 10;  })
+					.attr("height" , 18)
+					.attr("x", 50)
+					.attr("y", function (d,i) { return i * 20; })
+					.attr("fill", "yellow");
 
-				myChart.defaultColors = [new dimple.color("orange")]; // You can use #RGB here
+			canvas.selectAll("text")
+				.data(data)
+				.enter()
+					.append("text")
+					.attr("fill", "black")
+					.attr("font-size" , 12)
+					.attr("y", function (d,i) { return i * 20 + 12; })
+					.text(function (d) { return d.ReviewDate })
 
-				
-				myChart.addSeries(null, dimple.plot.bar);
-				
-				myChart.draw(0);
-			});
+		});
 
 
 		</script>
