@@ -27,46 +27,65 @@
 
 	<h2 class="text-center my-5">Number of Reviews overtime</h2>
 
-	<div id="chartContainer" class="Creative">
+	<!-- <div id="chartContainer" class="Creative"> -->
 		<script type="text/javascript">
 
-			var width = 600;
-			var height = 400;
-			
-			var svg = dimple.newSvg("#chartContainer",600,400);
-			svg.append("text")
-		        .attr("x", (width / 2))             
-		        .attr("y", 15)
-		        .attr("text-anchor", "middle")  
-		        .style("font-size", "16px")
-		        .style("font-family", "arial")
-		        .style("text-decoration", "none")  
-		        .text("Creative Code App F");
+			 var locations = [
+			     {location: 'creativeCodeApps.csv', color: 'orange', title: 'Creative Code Apps'},
+				 ];
 
-			d3.csv("./CSVFake/creativeCodeApps.csv", function (data) {
+			 $(document).ready(function () {
+			 	for (var i = 0; i < locations.length; i++) {
+			 		$('body').append('<div id="charts-' + i + '"></div>');
+			 	}
 
-				var myChart = new dimple.chart(svg, data);
-				
-				myChart
-					.setBounds(75,30,480,330); //Length width and location
-				
-				myChart
-				 	.addMeasureAxis("x","NumberOfReviews");
+			 	d3.queue() //Load multiple files using queue
+					.defer(d3.csv, 'creativeCodeApps.csv')
 
-				var y = myChart.addCategoryAxis("y", "ReviewDate");
-				y.addOrderRule("ReviewDate");
+					.await(readCsv); //Wait till all files loaded then rum readCSV func
 
-				myChart.defaultColors = [new dimple.color("orange")]; // You can use #RGB here
+			 	function readCsv(error, creativeCodeApps) {
+			 	    var datasets = [creativeCodeApps];
 
-				
-				myChart.addSeries(null, dimple.plot.bar);
-				
-				myChart.draw(0);
-			});
+			 	    for (var i = 0; i < locations.length; i++) {
 
+			 	        console.log(i);
+
+			 	        var svg = dimple.newSvg('#charts-' + i,600,400);
+			 			svg.append("text")
+			 	        .attr("x", (450 / 2))
+			 	        .attr("y", 15)
+			 	        .attr("text-anchor", "middle")
+			 	        .style("font-size", "12px")
+			 	        .style("font-family", "arial")
+			 	        .style("text-decoration", "none")
+			 	        .text(locations[i]['title']);
+
+			 			var myChart = new dimple.chart(svg, datasets[i]);
+
+			 			myChart
+			 				.setBounds(75,30,480,330); //Length width and location
+
+			 			myChart
+			 			 	.addMeasureAxis("x","NumberOfReviews");
+
+			 			var y = myChart.addCategoryAxis("y", "ReviewDate");
+			 			y.addOrderRule("ReviewDate");
+
+			 			myChart.defaultColors = [new dimple.color(locations[i]['color'])]; // You can use #RGB here
+
+
+			 			myChart.addSeries(null, dimple.plot.bar);
+
+			 			myChart.draw(1000);
+					}
+				}
+
+
+			 });
 
 		</script>
-	</div>
+	<!-- </div> -->
 
 
 </body>
