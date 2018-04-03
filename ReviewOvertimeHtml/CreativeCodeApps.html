@@ -27,7 +27,7 @@
 
 		<h2 class="text-center my-5">Number of Reviews overtime</h2>
 
-		<div id="chartContainer" class="mx-auto">
+		<div id="chartContainer">
 			<script type="text/javascript">
 
 				 var locations = [
@@ -53,13 +53,14 @@
 
 				 	        var svg = dimple.newSvg('#charts-' + i,600,400);
 				 			svg.append("text")
-				 	        .attr("x", (450 / 2))
+				 	        .attr("x", (600/2))
 				 	        .attr("y", 15)
 				 	        .attr("text-anchor", "middle")
 				 	        .style("font-size", "12px")
 				 	        .style("font-family", "arial")
 				 	        .style("text-decoration", "none")
 				 	        .text(locations[i]['title']);
+
 
 				 			var myChart = new dimple.chart(svg, datasets[i]);
 
