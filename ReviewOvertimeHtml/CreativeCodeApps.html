@@ -21,72 +21,72 @@
 </head>
 
 <body>
+	<div class="container-fluid">
+		<!-- Placeholder for navBar which is loaded with jQuery -->
+	    <div id=nav-placeholder></div>
 
-	<!-- Placeholder for navBar which is loaded with jQuery -->
-    <div id=nav-placeholder></div>
+		<h2 class="text-center my-5">Number of Reviews overtime</h2>
 
-	<h2 class="text-center my-5">Number of Reviews overtime</h2>
+		<div id="chartContainer" class="px-auto">
+			<script type="text/javascript">
 
-	<!-- <div id="chartContainer" class="Creative"> -->
-		<script type="text/javascript">
+				 var locations = [
+				     {location: 'CSVFake/creativeCodeApps.csv', color: 'orange', title: 'Creative Code Apps'},
+					 ];
 
-			 var locations = [
-			     {location: 'creativeCodeApps.csv', color: 'orange', title: 'Creative Code Apps'},
-				 ];
+				 $(document).ready(function () {
+				 	for (var i = 0; i < locations.length; i++) {
+				 		$('body').append('<div id="charts-' + i + '"></div>');
+				 	}
 
-			 $(document).ready(function () {
-			 	for (var i = 0; i < locations.length; i++) {
-			 		$('body').append('<div id="charts-' + i + '"></div>');
-			 	}
+				 	d3.queue() //Load multiple files using queue
+						.defer(d3.csv, 'CSVFake/creativeCodeApps.csv')
 
-			 	d3.queue() //Load multiple files using queue
-					.defer(d3.csv, 'creativeCodeApps.csv')
+						.await(readCsv); //Wait till all files loaded then rum readCSV func
 
-					.await(readCsv); //Wait till all files loaded then rum readCSV func
+				 	function readCsv(error, creativeCodeApps) {
+				 	    var datasets = [creativeCodeApps];
 
-			 	function readCsv(error, creativeCodeApps) {
-			 	    var datasets = [creativeCodeApps];
+				 	    for (var i = 0; i < locations.length; i++) {
 
-			 	    for (var i = 0; i < locations.length; i++) {
+				 	        console.log(i);
 
-			 	        console.log(i);
+				 	        var svg = dimple.newSvg('#charts-' + i,600,400);
+				 			svg.append("text")
+				 	        .attr("x", (450 / 2))
+				 	        .attr("y", 15)
+				 	        .attr("text-anchor", "middle")
+				 	        .style("font-size", "12px")
+				 	        .style("font-family", "arial")
+				 	        .style("text-decoration", "none")
+				 	        .text(locations[i]['title']);
 
-			 	        var svg = dimple.newSvg('#charts-' + i,600,400);
-			 			svg.append("text")
-			 	        .attr("x", (450 / 2))
-			 	        .attr("y", 15)
-			 	        .attr("text-anchor", "middle")
-			 	        .style("font-size", "12px")
-			 	        .style("font-family", "arial")
-			 	        .style("text-decoration", "none")
-			 	        .text(locations[i]['title']);
+				 			var myChart = new dimple.chart(svg, datasets[i]);
 
-			 			var myChart = new dimple.chart(svg, datasets[i]);
+				 			myChart
+				 				.setBounds(75,30,480,330); //Length width and location
 
-			 			myChart
-			 				.setBounds(75,30,480,330); //Length width and location
+				 			myChart
+				 			 	.addMeasureAxis("x","NumberOfReviews");
 
-			 			myChart
-			 			 	.addMeasureAxis("x","NumberOfReviews");
+				 			var y = myChart.addCategoryAxis("y", "ReviewDate");
+				 			y.addOrderRule("ReviewDate");
 
-			 			var y = myChart.addCategoryAxis("y", "ReviewDate");
-			 			y.addOrderRule("ReviewDate");
-
-			 			myChart.defaultColors = [new dimple.color(locations[i]['color'])]; // You can use #RGB here
+				 			myChart.defaultColors = [new dimple.color(locations[i]['color'])]; // You can use #RGB here
 
 
-			 			myChart.addSeries(null, dimple.plot.bar);
+				 			myChart.addSeries(null, dimple.plot.bar);
 
-			 			myChart.draw(1000);
+				 			myChart.draw(1000);
+						}
 					}
-				}
 
 
-			 });
+				 });
 
-		</script>
-	<!-- </div> -->
-
+			</script>
+		</div>
+	</div>
 
 </body>
 
