@@ -31,7 +31,7 @@
 			<script type="text/javascript">
 
 				 var locations = [
-				     {location: 'CSVFake/creativeCodeApps.csv', color: 'orange', title: 'Creative Code Apps'},
+				     {location: 'f-norot/f_norot_ ah.creativecodeapps.tiempo.csv', color: 'orange', title: 'Creative Code Apps'},
 					 ];
 
 				 $(document).ready(function () {
@@ -40,7 +40,7 @@
 				 	}
 
 				 	d3.queue() //Load multiple files using queue
-						.defer(d3.csv, 'CSVFake/creativeCodeApps.csv')
+						.defer(d3.csv, 'f-norot/f_norot_ ah.creativecodeapps.tiempo.csv')
 
 						.await(readCsv); //Wait till all files loaded then rum readCSV func
 
