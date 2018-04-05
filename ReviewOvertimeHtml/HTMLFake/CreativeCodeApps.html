@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Review Visualisations</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dimple/2.3.0/dimple.latest.js">
+	</script>
+	<script src="./navBar/navBar.js"></script>
+
+</head>
+
+<body>
+	<div class="container-fluid">
+		<!-- Placeholder for navBar which is loaded with jQuery -->
+	    <div id=nav-placeholder></div>
+
+		<h2 class="text-center my-5">Number of Reviews overtime</h2>
+
+		<div id="chartContainer">
+			<script type="text/javascript">
+
+				 var locations = [
+				     {color: 'orange', title: 'Creative Code Apps'},
+					 ];
+
+				 $(document).ready(function () {
+				 	for (var i = 0; i < locations.length; i++) {
+				 		$('body').append('<div id="charts-' + i + '"></div>');
+				 	}
+
+				 	d3.queue() //Load multiple files using queue
+						.defer(d3.csv, '../f-norot/f_norot_ ah.creativecodeapps.tiempo.csv')
+
+						.await(readCsv); //Wait till all files loaded then rum readCSV func
+
+				 	function readCsv(error, myData) {
+				 	    var datasets = [myData];
+
+				 	    for (var i = 0; i < locations.length; i++) {
+
+				 	        console.log(i);
+
+				 	        var svg = dimple.newSvg('#charts-' + i,600,500);
+				 			svg.append("text")
+				 	        .attr("x", (600/2))
+				 	        .attr("y", 15)
+				 	        .attr("text-anchor", "middle")
+				 	        .style("font-size", "12px")
+				 	        .style("font-family", "arial")
+				 	        .style("text-decoration", "none")
+				 	        .text(locations[i]['title']);
+
+
+				 			var myChart = new dimple.chart(svg, datasets[i]);
+
+				 			myChart
+				 				.setBounds(90,30,480,300); //Length width and location
+
+				 			myChart
+				 			 	.addMeasureAxis("y","NumberOfReviews");
+
+				 			var x = myChart.addCategoryAxis("x", "ReviewDate");
+				 			x.addOrderRule("ReviewDate");
+
+				 			myChart.defaultColors = [new dimple.color(locations[i]['color'])]; // You can use #RGB here
+
+
+				 			myChart.addSeries(null, dimple.plot.bar);
+
+				 			myChart.draw(1000);
+						}
+					}
+
+
+				 });
+
+			</script>
+		</div>
+	</div>
+
+</body>
+
+</html>

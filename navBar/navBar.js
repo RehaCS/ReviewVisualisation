@@ -32,11 +32,11 @@ $(function(){
       '</li>' +
       
       '<li class="nav-item">' +
-        '<a class="nav-link" href="#">Features</a>' +
+        '<a class="nav-link" href="#">Information</a>' +
       '</li>' +
       
       '<li class="nav-item">' +
-        '<a class="nav-link" href="#">Pricing</a>' +
+        '<a class="nav-link" href="#">Test Yourself</a>' +
       '</li>' +
 
     '</ul>' +
