@@ -1,4 +1,4 @@
-// Script which loads the navigation bar (navBar.html)
+// Script which contains the HTML for the navBar
 $(function(){
   $("#nav-placeholder").html(
   	'<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">' +

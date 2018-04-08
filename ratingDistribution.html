@@ -5,25 +5,46 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 <body>
+  <!--  Loads ratingDist.js which contains the clickacle images and links to HTML pages. Places images in the ClickableImage divs -->
+  <script src="./ratingDist.js" type="text/javascript"></script>
+  <!-- loads navbar.js-->
+  <script src="./navBar/navBar.js" type="text/javascript"> </script>
 
   <div class="container-fluid">
 
     <!-- Placeholder for navBar which is loaded with jQuery -->
     <div id=nav-placeholder> </div>
 
-    <h1 class="title">Distribution Of Ratings</h1>
-    <p> Visualisations: Benign Vs Fraudulent</p>
-  </div>
+      <h1 class="title text-center">Distribution of Ratings</h1>
+      <h4 class="text-center my-4"> Visualisations: Benign Vs Fraudulent</h4>
 
-  <!-- loads navbar.js-->
-  <script src="./navBar/navBar.js" type="text/javascript"> </script>
+    <!-- Columns and rows for Benign and Fake -->
+   
+    <!-- BENIGN -->
+    <div class="row">
+
+      <div class="col-sm-12 col-md-6 col-lg-6"> 
+        <h5 class=" text-center p-2 border">Benign Reviews</h5> 
+        <div class="realClickableImage" ></div>
+      </div>
+    
+        
+      <!-- FRAUDULENT -->
+      <div class="col-sm-12 col-md-6 col-lg-6"> 
+        <h5 class=" text-center p-2 border">Fraudulent Reviews</h5> 
+        <div class="fakeClickableImage" ></div>
+      </div>
+      
+    </div>
+  
+  </div>
 
 </body>
 </html>
