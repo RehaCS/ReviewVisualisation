@@ -5,8 +5,8 @@
 	<title>Review Visualisations</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link rel="icon" href="../favicon.ico" type="image/x-icon">
+	<!-- Loads Favicon -->
+	<link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -17,6 +17,12 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/dimple/2.3.0/dimple.latest.js">
 	</script>
 	<script src="./navBar/navBar.js"></script>
+
+	<style>
+		#chartContainer{
+			width: 500px; margin: 0 auto;
+		}
+	</style>
 
 </head>
 
@@ -30,60 +36,38 @@
 		<div id="chartContainer">
 			<script type="text/javascript">
 
-				 var locations = [
-				     {color: 'red', title: 'Noodle Cake'},
-					 ];
+			var width = 500;
+			
+			var svg = dimple.newSvg("#chartContainer",width,500);
+			svg.append("text")
+		        .attr("x", (width / 2))             
+		        .attr("y", 15)
+		        .attr("text-anchor", "middle")  
+		        .style("font-size", "12px")
+		        .style("font-family", "arial")
+		        .style("text-decoration", "none")  
+		        .text("Noodle Cake");
 
-				 $(document).ready(function () {
-				 	for (var i = 0; i < locations.length; i++) {
-				 		$('body').append('<div id="charts-' + i + '"></div>');
-				 	}
+			d3.csv("../b-norot/b_norot_air.com.noodlecake.joinz.csv", function (data) {
 
-				 	d3.queue() //Load multiple files using queue
-						.defer(d3.csv, '../b-norot/b_norot_air.com.noodlecake.joinz.csv')
+				var myChart = new dimple.chart(svg, data);
+				
+				myChart
+					.setBounds(75,30,500,330); //Length width and location
+				
+				myChart
+				 	.addMeasureAxis("y","NumberOfReviews");
 
-						.await(readCsv); //Wait till all files loaded then rum readCSV func
+				var x = myChart.addCategoryAxis("x", "ReviewDate");
+				x.addOrderRule("ReviewDate");
 
-				 	function readCsv(error, myData) {
-				 	    var datasets = [myData];
+				myChart.defaultColors = [new dimple.color("red")]; // You can use #RGB here
 
-				 	    for (var i = 0; i < locations.length; i++) {
-
-				 	        console.log(i);
-
-				 	        var svg = dimple.newSvg('#charts-' + i,600,400);
-				 			svg.append("text")
-				 	        .attr("x", (600/2))
-				 	        .attr("y", 15)
-				 	        .attr("text-anchor", "middle")
-				 	        .style("font-size", "12px")
-				 	        .style("font-family", "arial")
-				 	        .style("text-decoration", "none")
-				 	        .text(locations[i]['title']);
-
-
-				 			var myChart = new dimple.chart(svg, datasets[i]);
-
-				 			myChart
-				 				.setBounds(90,30,480,330); //Length width and location
-
-				 			myChart
-				 			 	.addMeasureAxis("y","NumberOfReviews");
-
-				 			var x = myChart.addCategoryAxis("x", "ReviewDate");
-				 			x.addOrderRule("ReviewDate");
-
-				 			myChart.defaultColors = [new dimple.color(locations[i]['color'])]; // You can use #RGB here
-
-
-				 			myChart.addSeries(null, dimple.plot.bar);
-
-				 			myChart.draw(1000);
-						}
-					}
-
-
-				 });
+				
+				myChart.addSeries(null, dimple.plot.bar);
+				
+				myChart.draw(1000);
+			});
 
 			</script>
 		</div>

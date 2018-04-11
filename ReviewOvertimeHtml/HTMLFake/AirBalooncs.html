@@ -18,6 +18,14 @@
 	</script>
 	<script src="./navBar/navBar.js"></script>
 
+	<style type="text/css">
+		#chartContainer{
+			width: 100wv;
+			overflow-x: scroll;
+			width: 600px; margin: 0 auto;
+		}
+	</style>
+
 </head>
 
 <body>
@@ -30,53 +38,38 @@
 		<div id="chartContainer">
 			<script type="text/javascript">
 
-				 var locations = [
-				     {color: 'orange', title: 'Air Balooncs'},
-				 ];
+			var width = 600;
+			
+			var svg = dimple.newSvg("#chartContainer",width,500);
+			svg.append("text")
+		        .attr("x", (width / 2))             
+		        .attr("y", 15)
+		        .attr("text-anchor", "middle")  
+		        .style("font-size", "12px")
+		        .style("font-family", "arial")
+		        .style("text-decoration", "none")  
+		        .text("Air Balooncs");
 
-				 $(document).ready(function () {
+			d3.csv("../f-norot/f_norot_ air.balooncs3.csv", function (data) {
 
-				 	d3.queue() //Load multiple files using queue
-						.defer(d3.csv, '../f-norot/f_norot_ air.balooncs3.csv')
+				var myChart = new dimple.chart(svg, data);
+				
+				myChart
+					.setBounds(75,30,500,330); //Length width and location
+				
+				myChart
+				 	.addMeasureAxis("y","NumberOfReviews");
 
-						.await(readCsv); //Wait till all files loaded then rum readCSV function
+				var x = myChart.addCategoryAxis("x", "ReviewDate");
+				x.addOrderRule("ReviewDate");
 
-				 	function readCsv(error, myData) {
-				 	    var datasets = [myData];
+				myChart.defaultColors = [new dimple.color("orange")]; // You can use #RGB here
 
-				 	    for (var i = 0; i < locations.length; i++) {
-
-				 	    	//Adding SVG element to #charts-0 div and appending text.
-			 	        var svg = dimple.newSvg('#charts-' + i,600,500);
-			 					svg.append("text")
-				 	        .attr("x", (600/2))
-				 	        .attr("y", 15)
-				 	        .attr("text-anchor", "middle")
-				 	        .style("font-size", "12px")
-				 	        .style("font-family", "arial")
-				 	        .style("text-decoration", "none")
-				 	        .text(locations[i]['title']);
-
-				 	    //Creating dimple chart myData with the svg in which to render and the data that it's based on.
-				 			var myChart = new dimple.chart(svg, datasets[i]); 
-
-				 			myChart.setBounds(90,30,480,300); //Location (x y), length and width
-
-				 			myChart.addMeasureAxis("y","NumberOfReviews"); //y axis
-
-				 			var x = myChart.addCategoryAxis("x", "ReviewDate"); //x axis
-				 			x.addOrderRule("ReviewDate"); //Orders the dates
-
-				 			myChart.defaultColors = [new dimple.color(locations[i]['color'])]; // You can use #RGB here
-
-				 			myChart.addSeries(null, dimple.plot.bar); //
-
-				 			myChart.draw(1000); //Draws chart with 1 second 
-						}
-					}
-
-
-				 });
+				
+				myChart.addSeries(null, dimple.plot.bar);
+				
+				myChart.draw(1000);
+			});
 
 			</script>
 		</div>
