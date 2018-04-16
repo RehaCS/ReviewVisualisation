@@ -1,19 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Review Visualisations</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="icon" href="../../favicon.ico" type="image/x-icon">
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-</head>
-<body>
-
-<!--   <script type="text/javascript">
 
     var href = [
     'HTMLReal/wcGruntyGunner',
@@ -60,7 +44,7 @@
     'HTMLReal/wcSneakyFox',
     'HTMLReal/wcSpotTheDiff',
     'HTMLReal/wcBulkyPix',
-    'HTMLReal/wcBulkyPix',
+    'HTMLReal/wcAnyOption',
 
     'HTMLFake/wcCreativeCodeApps',
     'HTMLFake/wcAirBalooncs',
@@ -107,7 +91,7 @@
     'HTMLFake/wcBathoryFree',
     'HTMLFake/wcStockAnalyst',
     'HTMLFake/wcSuperDuck',
-    'HTMLFake/VisionBooks'
+    'HTMLFake/wcVisionBooks'
     ];
 
     var src = [
@@ -223,47 +207,3 @@
       el.append('<a href="./WordCloudHTML/' + href + '.html"><img src="./WordCloudHTML/' + src + '.svg" style="width: 50%"></a>');
 
     }
-
-  </script> -->
-
-  <div class="container-fluid">
-
-    <!-- Placeholder for navBar which is loaded with jQuery -->
-    <div id=nav-placeholder> </div>
-
-    <h1 class="title text-center">Word Cloud</h1>
-    <h4 class="text-center my-5"> Visualisations: Benign Vs Fraudulent</h4>
-
-    <!-- Columns and rows for Benign and Fake -->
-   
-    <!-- BENIGN -->
-    <div class="row">
-
-      <div class="col-sm-12 col-md-6 col-lg-6"> 
-        <h5 class=" text-center p-2 border">Benign Reviews</h5> 
-        <div class="realClickableImage">
-          <!-- <a href="./WordCloudHTML/HTMLReal/wcLibraryEscape.html">
-          <img src="./WordCloudHTML/b-wc/LibraryEscape.svg" style="width: 50%"></a> -->
-        </div>
-
-      </div>
-    
-        
-      <!-- FRAUDULENT -->
-      <div class="col-sm-12 col-md-6 col-lg-6"> 
-        <h5 class=" text-center p-2 border">Fraudulent Reviews</h5> 
-        <div class="fakeClickableImage" ></div>
-      </div>
-      
-    </div>
-
-  </div>
-
-  <!-- loads navbar.js-->
-  <script src="./navBar/navBar.js" type="text/javascript"></script>
-  
-  <!-- Loads wc.js which contains href and locations -->
-  <script src="./wc.js" type="text/javascript"></script>
-
-</body>
-</html>
