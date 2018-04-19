@@ -84,7 +84,6 @@
         'Fake/Estradaovelha',
         'Fake/MWCEasy',
         'Fake/CathieApp'
-
       ];
       
 

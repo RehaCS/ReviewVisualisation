@@ -104,7 +104,7 @@
     function clickImage (elem, x) {
         
       var el = $(elem);
-      el.append( '<af href="./RatingDistributionHTML/HTML' + x +
+      el.append( '<a href="./RatingDistributionHTML/HTML' + x +
           '.html"><img class="align-self-start mr-3 mb-2 img-thumbnail img-fluid" style="width: 30%;" src="./images/RatingDistribution/' + x + '.png" alt="Generic placeholder image"></a>' 
       );
 
