@@ -22,6 +22,27 @@
     '<a href="./RatingDistributionHTML/HTMLReal/eternalJourney.html">',
     '<a href="./RatingDistributionHTML/HTMLReal/houseOfDoors.html">',
     '<a href="./RatingDistributionHTML/HTMLReal/lakehouseFull.html">',
+    '<a href="./RatingDistributionHTML/HTMLReal/straySouls.html">',
+    '<a href="./RatingDistributionHTML/HTMLReal/localRegister.html">',
+    '<a href="./RatingDistributionHTML/HTMLReal/sellerMobile.html">',
+    '<a href="./RatingDistributionHTML/HTMLReal/bulkyPix.html">',
+    '<a href="./RatingDistributionHTML/HTMLReal/ghostMapper.html">',
+    '<a href="./RatingDistributionHTML/HTMLReal/lTheme.html">',
+    '<a href="./RatingDistributionHTML/HTMLReal/elevate.html">',
+    '<a href="./RatingDistributionHTML/HTMLReal/alertsPro.html">',
+    '<a href="./RatingDistributionHTML/HTMLReal/oneNote.html">',
+    '<a href="./RatingDistributionHTML/HTMLReal/parentToolKit.html">',
+    '<a href="./RatingDistributionHTML/HTMLReal/cpuSaver.html">',
+    '<a href="./RatingDistributionHTML/HTMLReal/teamDigital.html">',
+    '<a href="./RatingDistributionHTML/HTMLReal/cheatSheet.html">',
+    '<a href="./RatingDistributionHTML/HTMLReal/openProject.html">',
+    '<a href="./RatingDistributionHTML/HTMLReal/postLet.html">',
+    '<a href="./RatingDistributionHTML/HTMLReal/stockGlow.html">',
+    '<a href="./RatingDistributionHTML/HTMLReal/fbReader.html">',
+    '<a href="./RatingDistributionHTML/HTMLReal/gPlayFreemium.html">',
+    '<a href="./RatingDistributionHTML/HTMLReal/brightNest.html">',
+    '<a href="./RatingDistributionHTML/HTMLReal/anyOption.html">',
+    '<a href="./RatingDistributionHTML/HTMLReal/impossible.html">',
     //href FAKE
     '<a href="./RatingDistributionHTML/HTMLFake/creativeCodeApps.html">',
     '<a href="./RatingDistributionHTML/HTMLFake/airBalooncs.html">',
@@ -44,7 +65,30 @@
     '<a href="./RatingDistributionHTML/HTMLFake/piranhaQueen.html">',
     '<a href="./RatingDistributionHTML/HTMLFake/luxometerThermometer.html">',
     '<a href="./RatingDistributionHTML/HTMLFake/zoomAndFlash.html">',
-    '<a href="./RatingDistributionHTML/HTMLFake/birthdayCalender.html">'
+    '<a href="./RatingDistributionHTML/HTMLFake/birthdayCalender.html">',
+    '<a href="./RatingDistributionHTML/HTMLFake/carKeysSimulator.html">',
+    '<a href="./RatingDistributionHTML/HTMLFake/lieDetector.html">',
+    '<a href="./RatingDistributionHTML/HTMLFake/faceChanger.html">',
+    '<a href="./RatingDistributionHTML/HTMLFake/funnyJokes.html">',
+    '<a href="./RatingDistributionHTML/HTMLFake/loveCalculator.html">',
+    '<a href="./RatingDistributionHTML/HTMLFake/photoEditor.html">',
+    '<a href="./RatingDistributionHTML/HTMLFake/spiderPrank.html">',
+    '<a href="./RatingDistributionHTML/HTMLFake/stopwatchCountdown.html">',
+    '<a href="./RatingDistributionHTML/HTMLFake/voiceRecorder.html">',
+    '<a href="./RatingDistributionHTML/HTMLFake/gpsLiveMaps.html">',
+    '<a href="./RatingDistributionHTML/HTMLFake/padronElectoral.html">',
+    '<a href="./RatingDistributionHTML/HTMLFake/dogWhistle.html">',
+    '<a href="./RatingDistributionHTML/HTMLFake/musicPlayer.html">',
+    '<a href="./RatingDistributionHTML/HTMLFake/bpScanner.html">',
+    '<a href="./RatingDistributionHTML/HTMLFake/bpDetector.html">',
+    '<a href="./RatingDistributionHTML/HTMLFake/bakuNow.html">',
+    '<a href="./RatingDistributionHTML/HTMLFake/satNav.html">',
+    '<a href="./RatingDistributionHTML/HTMLFake/gpsNav.html">',
+    '<a href="./RatingDistributionHTML/HTMLFake/estradaovelha.html">',
+    '<a href="./RatingDistributionHTML/HTMLFake/mwcEasy.html">',
+    '<a href="./RatingDistributionHTML/HTMLFake/cathieApp.html">',
+    '<a href="./RatingDistributionHTML/HTMLFake/goodAndroid.html">',
+    '<a href="./RatingDistributionHTML/HTMLFake/superDuck.html">'
     ];
 
     var y = [
@@ -70,6 +114,27 @@
     'src="./images/RatingDistribution/Real/eternalJourney.png"',
     'src="./images/RatingDistribution/Real/houseOfDoors.png"',
     'src="./images/RatingDistribution/Real/lakehouseFull.png"',
+    'src="./images/RatingDistribution/Real/straySouls.png"',
+    'src="./images/RatingDistribution/Real/localRegister.png"',
+    'src="./images/RatingDistribution/Real/sellerMobile.png"',
+    'src="./images/RatingDistribution/Real/bulkyPix.png"',
+    'src="./images/RatingDistribution/Real/ghostMapper.png"',
+    'src="./images/RatingDistribution/Real/lTheme.png"',
+    'src="./images/RatingDistribution/Real/elevate.png"',
+    'src="./images/RatingDistribution/Real/alertsPro.png"',
+    'src="./images/RatingDistribution/Real/oneNote.png"',
+    'src="./images/RatingDistribution/Real/parentToolKit.png"',
+    'src="./images/RatingDistribution/Real/cpuSaver.png"',
+    'src="./images/RatingDistribution/Real/teamDigital.png"',
+    'src="./images/RatingDistribution/Real/cheatSheet.png"',
+    'src="./images/RatingDistribution/Real/openProject.png"',
+    'src="./images/RatingDistribution/Real/postLet.png"',
+    'src="./images/RatingDistribution/Real/stockGlow.png"',
+    'src="./images/RatingDistribution/Real/fbReader.png"',
+    'src="./images/RatingDistribution/Real/gPlayFreemium.png"',
+    'src="./images/RatingDistribution/Real/brightNest.png"',
+    'src="./images/RatingDistribution/Real/anyOption.png"',
+    'src="./images/RatingDistribution/Real/impossible.png"',
     //src FAKE
     'src="./images/RatingDistribution/Fake/creativeCodeApps.png"',
     'src="./images/RatingDistribution/Fake/airBalooncs.png"',
@@ -92,15 +157,38 @@
     'src="./images/RatingDistribution/Fake/piranhaQueen.png"',
     'src="./images/RatingDistribution/Fake/luxometerThermometer.png"',
     'src="./images/RatingDistribution/Fake/zoomAndFlash.png"',
-    'src="./images/RatingDistribution/Fake/birthdayCalender.png"'
+    'src="./images/RatingDistribution/Fake/birthdayCalender.png"',
+    'src="./images/RatingDistribution/Fake/carKeysSimulator.png"',
+    'src="./images/RatingDistribution/Fake/lieDetector.png"',
+    'src="./images/RatingDistribution/Fake/faceChanger.png"',
+    'src="./images/RatingDistribution/Fake/funnyJokes.png"',
+    'src="./images/RatingDistribution/Fake/loveCalculator.png"',
+    'src="./images/RatingDistribution/Fake/photoEditor.png"',
+    'src="./images/RatingDistribution/Fake/spiderPrank.png"',
+    'src="./images/RatingDistribution/Fake/stopwatchCountdown.png"',
+    'src="./images/RatingDistribution/Fake/voiceRecorder.png"',
+    'src="./images/RatingDistribution/Fake/gpsLiveMaps.png"',
+    'src="./images/RatingDistribution/Fake/padronElectoral.png"',
+    'src="./images/RatingDistribution/Fake/dogWhistle.png"',
+    'src="./images/RatingDistribution/Fake/musicPlayer.png"',
+    'src="./images/RatingDistribution/Fake/bpScanner.png"',
+    'src="./images/RatingDistribution/Fake/bpDetector.png"',
+    'src="./images/RatingDistribution/Fake/bakuNow.png"',
+    'src="./images/RatingDistribution/Fake/satNav.png"',
+    'src="./images/RatingDistribution/Fake/gpsNav.png"',
+    'src="./images/RatingDistribution/Fake/estradaovelha.png"',
+    'src="./images/RatingDistribution/Fake/mwcEasy.png"',
+    'src="./images/RatingDistribution/Fake/cathieApp.png"',
+    'src="./images/RatingDistribution/Fake/goodAndroid.png"',
+    'src="./images/RatingDistribution/Fake/superDuck.png"'
     ];
 
     $(document).ready(function(){
-      for (var i = 0; i < 21; i++){
+      for (var i = 0; i < 42; i++){
         clickImage('.realClickableImage',x[i],y[i]);
       }
 
-      for(var i = 21; i <x.length; i++){
+      for(var i = 42; i <x.length; i++){
         clickImage('.fakeClickableImage', x[i], y[i]);
       }
     });

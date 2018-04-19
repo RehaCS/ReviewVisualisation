@@ -54,8 +54,8 @@
 				myChart
 					.setBounds(75,30,480,330); //Length width and location
 				
-				myChart
-				 	.addMeasureAxis("y","NumberOfReviews");
+				var y = myChart.addMeasureAxis("y","NumberOfReviews");
+				y.overrideMax = 4;
 
 				var x = myChart.addCategoryAxis("x", "ReviewDate");
 				x.addOrderRule("ReviewDate");

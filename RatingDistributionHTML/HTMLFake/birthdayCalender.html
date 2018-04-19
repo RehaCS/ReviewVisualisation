@@ -20,8 +20,6 @@
 
 	<style type="text/css">
 		#chartContainer { width: 590px; margin: 0 auto; }
-		.svgCenter { margin: 0 auto; }
-
 	</style>
 
 </head>
@@ -36,18 +34,18 @@
 		<div class="row">
       <div class="col-sm-12 col-md-12 col-lg-12"> 
 
-            <h5 class=" text-center p-2 border">Punisher Shooting</h5> 
+            <h5 class=" text-center p-2 border">Birthday Calender</h5> 
 
-        <div id="chartContainer" class="svgCenter" ></div>
+        <div id="chartContainer"  ></div>
       </div>
     </div>
 
-		<!-- <div id="chartContainer" ></div> -->
+		
 
 		<script type="text/javascript">
       var svg = dimple.newSvg("#chartContainer", 590, 500);
 
-    	d3.tsv("../f-dor/f_dor_ air.com.mobilestudio.punisher.shooting.tsv", function (data) {
+    	d3.tsv("../f-dor/f_dor_ apps.fortuneappsdev.birthdayremindercalender.tsv", function (data) {
       
       var myChart = new dimple.chart(svg, data);
       

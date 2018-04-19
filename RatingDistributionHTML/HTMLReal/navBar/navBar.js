@@ -24,8 +24,8 @@ $(function(){
         '<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">' +
           '<a class="dropdown-item" href="../../reviewOvertime.html">Review Overtime</a>' +
           '<a class="dropdown-item" href="../../ratingDistribution.html">Rating Distribution</a>' +
-          '<a class="dropdown-item" href="../../comLength.html">Comment Length</a>' +
-          '<a class="dropdown-item" href="../../avgComLength.html">Average Comment Length</a>' +
+          '<a class="dropdown-item" href="../../comLength.html">Review Length</a>' +
+          '<a class="dropdown-item" href="../../avgComLength.html">Average Review Length</a>' +
           '<a class="dropdown-item" href="../../wordCloud.html">Word Cloud</a>' +
         '</div>' +
       

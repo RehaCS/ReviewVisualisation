@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Review Visualisations</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Loads Favicon -->
+	<link rel="icon" href="../../favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dimple/2.3.0/dimple.latest.js">
+	</script>
+	<script src="./navBar/navBar.js"></script>
+
+	<style type="text/css">
+		#chartContainer{
+			width: 100wv;
+			overflow-x: scroll;
+			/*width: 1200px; margin: 0 auto;*/
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="container-fluid">
+		<!-- Placeholder for navBar which is loaded with jQuery -->
+	    <div id=nav-placeholder></div>
+
+		<h2 class="text-center my-5">Number of Reviews overtime</h2>
+
+		<div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12"> 
+
+            <h5 class=" text-center p-2 border">CutePonyCares</h5> 
+
+        <div id="chartContainer"  ></div>
+      </div>
+    </div>
+
+		<div id="chartContainer">
+			<script type="text/javascript">
+
+			var width = 3000;
+			
+			var svg = dimple.newSvg("#chartContainer",width,600);
+
+			d3.tsv("../f-rl/f_rl_ air.com.ggy.thecuteponycares.tsv", function (data) {
+
+				var myChart = new dimple.chart(svg, data);
+				
+				myChart
+					.setBounds(75,30,2900,300); //Length width and location
+				
+				var y = myChart.addMeasureAxis("y","ReviewLength");
+				y.tickFormat = "0"
+				y.overrideMax = 1000;
+
+				var x = myChart.addCategoryAxis("x", "UserName");
+				x.addOrderRule("UserName");
+
+				myChart.defaultColors = [new dimple.color("blue")]; 
+				
+				myChart.addSeries(null, dimple.plot.bubble);
+				
+				myChart.draw(1000);
+			});
+
+			</script>
+		</div>
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Review Visualisations</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon" href="../../favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dimple/2.3.0/dimple.latest.js">
+	</script>
+	<script src="./navBar/navBar.js"></script>
+
+	<style type="text/css">
+		#chartContainer { width: 590px; margin: 0 auto; }
+	</style>
+
+</head>
+
+<body>
+	<div class="container-fluid">
+		<!-- Placeholder for navBar which is loaded with jQuery -->
+	   <div id=nav-placeholder></div>
+
+		<h2 class="text-center my-5">Distribution Of Rating</h2>
+
+		<div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12"> 
+
+            <h5 class=" text-center p-2 border">Photo Editor</h5> 
+
+        <div id="chartContainer"  ></div>
+      </div>
+    </div>
+
+		
+
+		<script type="text/javascript">
+      var svg = dimple.newSvg("#chartContainer", 590, 500);
+
+    	d3.tsv("../f-dor/f_dor_ apps.fortuneappsdev.photoeditorphotoeffects.tsv", function (data) {
+      
+      var myChart = new dimple.chart(svg, data);
+      
+      myChart.setBounds(20, 40, 460, 360)
+      myChart.addMeasureAxis("p", "NoOfReviews");
+      
+      var ring = myChart.addSeries("Rating", dimple.plot.pie);
+      ring.innerRadius = "50%";
+      ring.addOrderRule(["20%","40%","60%", "80%", "100%"]);
+      
+      myChart.addLegend(500, 20, 90, 300, "left");
+      
+      myChart.draw(0);
+
+    	});
+  	</script>
+		
+	</div>
+
+</body>
+
+</html>
