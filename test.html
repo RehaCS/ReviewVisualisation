@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Yourself</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- favicon -->
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<!-- removes bullet points from unordered lists -->
+	<style type="text/css">
+		ul{
+			list-style: none;
+		}
+	</style>	
+
+</head>
+<body>
+	<script src="./navBar/navBar.js"></script>
+	<script src="./test.js"></script>
+
+	<div id="nav-placeholder"></div>
+
+	<div class="container">
+		<header class="text-center mt-5 mb-3 py-3 bg-secondary text-white"></header>
+		
+		<main>
+			
+			<form id="q1" class="q-form" data-question="1">
+				<div style="margin: 0 auto; width: 100%">
+					<h4 my-3>1. Which visualization represents a benign application?</h4>
+					<figure class="figure">
+				    <img src="./images/QDiscoStackNOROT.png" class="figure-img img-fluid" width="500" alt="submit"/>
+				    <figcaption class="figure-caption text-center">Visualization 1</figcaption>
+				  </figure>
+				  <figure class="figure">
+				    <img src="./images/QFarmerHouseNOROT.png" class="figure-img img-fluid" width="500" alt="submit"/>
+				    <figcaption class="figure-caption text-center">Visualization 2</figcaption>
+				  </figure>
+				</div>
+				<ul>
+					<li><input type="radio" name="q1" value="a"/> Visualization 1 </li>
+					<li><input type="radio" name="q1" value="b"/> Visualization 2 </li>
+				</ul>
+				<button id="submit" class="my-3">Submit</button>
+			</form>
+			
+			<form id="q2" class="q-form" data-question="2">
+				<div style="margin: 0 auto; width: 100%">
+					<h6>2. Which visualization is benign</h6>
+					<figure class="figure">
+				    <img src="./images/QFarmerHouseDOR.png" class="figure-img img-fluid" width="500" alt="submit"/>
+				    <figcaption class="figure-caption text-center">Visualization 1</figcaption>
+				  </figure>
+				  <figure class="figure">
+				    <img src="./images/QDiscoStackDOR.png" class="figure-img img-fluid" width="500" alt="submit"/>
+				    <figcaption class="figure-caption text-center">Visualization 2</figcaption>
+				  </figure>
+				</div>
+				<ul>
+					<li><input type="radio" name="q2" value="a"/> Visualization 1 </li>
+					<li><input type="radio" name="q2" value="b"/> Visualization 2 </li>
+				</ul>
+				<button id="submit" class="my-3">Submit</button>
+			</form>
+
+			<form id="q3" class="q-form" data-question="3">
+				<div style="margin: 0 auto; width: 100%">
+					<h6 class="my-3">3. Which visualization represents a benign application?</h6>
+					<figure class="figure">
+				    <img src="./images/QHotDfsRL.png" class="figure-img img-fluid" width="500" alt="submit"/>
+				    <figcaption class="figure-caption text-center">Visualization 1</figcaption>
+				  </figure>
+				  <figure class="figure">
+				    <img src="./images/QSpiderPrankRL.png" class="figure-img img-fluid" width="500" alt="submit"/>
+				    <figcaption class="figure-caption text-center">Visualization 2</figcaption>
+				  </figure>
+				</div>
+				<ul>
+					<li><input type="radio" name="q3" value="a"/> Visualization 1 </li>
+					<li><input type="radio" name="q3" value="b"/> Visualization 2 </li>
+				</ul>
+				<button id="submit" class="my-3">Submit</button>
+			</form>
+
+			<form id="q4" class="q-form" data-question="4">
+				<div style="margin: 0 auto; width: 100%">
+					<h6>4. Which visualization is benign</h6>
+					<figure class="figure">
+				    <img src="./images/wordCloud.png" class="figure-img img-fluid" width="500" alt="submit"/>
+				    <figcaption class="figure-caption text-center">Visualization 1</figcaption>
+				  </figure>
+				  <figure class="figure">
+				    <img src="./images/wordCloud.png" class="figure-img img-fluid" width="500" alt="submit"/>
+				    <figcaption class="figure-caption text-center">Visualization 2</figcaption>
+				  </figure>
+				</div>
+				<ul>
+					<li><input type="radio" name="q4" value="a"/> Visualization 1 </li>
+					<li><input type="radio" name="q4" value="b"/> Visualization 2 </li>
+				</ul>
+				<button id="submit" class="my-3">Submit</button>
+			</form>
+
+			<form id="q5" class="q-form" ata-question="5">
+				<div style="margin: 0 auto; width: 100%">
+					<h6>5. Which visualization is benign</h6>
+					<figure class="figure">
+				    <img src="./images/wordCloud.png" class="figure-img img-fluid" width="500" alt="submit"/>
+				    <figcaption class="figure-caption text-center">Visualization 1</figcaption>
+				  </figure>
+				  <figure class="figure">
+				    <img src="./images/wordCloud.png" class="figure-img img-fluid" width="500" alt="submit"/>
+				    <figcaption class="figure-caption text-center">Visualization 2</figcaption>
+				  </figure>
+				</div>
+				<ul>
+					<li><input type="radio" name="q5" value="a"/> Visualization 1 </li>
+					<li><input type="radio" name="q5" value="b"/> Visualization 2 </li>
+				</ul>
+				<button id="submit" class="my-3">Submit</button>
+			</form>
+
+			<div id="results" class="my-2"></div>
+
+		</main>
+
+		<footer class="text-center mt-3 py-3 bg-secondary text-white"></footer>
+
+	</div>
+
+</body>
+</html>

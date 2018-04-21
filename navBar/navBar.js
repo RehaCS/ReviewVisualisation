@@ -36,7 +36,7 @@ $(function(){
       '</li>' +
       
       '<li class="nav-item">' +
-        '<a class="nav-link" href="#">Test Yourself</a>' +
+        '<a class="nav-link" href="./test.html">Test Yourself</a>' +
       '</li>' +
 
     '</ul>' +
