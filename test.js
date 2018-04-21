@@ -1,6 +1,6 @@
 //https://www.youtube.com/watch?v=oLH4uQzbNxI&index=39&list=PLDmvslp_VR0wkiclky6vj6SSDx-N2QE9z
 var correctAns = 0;
-var totalQ = 5;
+var totalQ = 4;
 
 //Initialiser
 function init(){
@@ -9,7 +9,7 @@ function init(){
 	sessionStorage.setItem('a2','a');
 	sessionStorage.setItem('a3','a');
 	sessionStorage.setItem('a4','a');
-	sessionStorage.setItem('a5','a');
+	// sessionStorage.setItem('a5','a');
 }
 
 
@@ -20,17 +20,6 @@ $(document).ready(function (){
 
 	//show q1
 	$('#q1').show();
-
-	// $('.q-form #submit').click(function(){
-	// 	//get data attr. Parent of submit is <form>
-	// 	current = $(this).parents('form:first').data('question');
-	// 	next = $(this).parents('form:first').data('question') +1;
-	// 	$('.q-form').hide();
-	// 	//show next q
-	// 	$('#q'+next'').fadeIn(300);
-	// 	process(''+current+'');
-	// 	return false;
-	// });
 
 	$('#q1 #submit').click(function(){
 		$('.q-form').hide();
@@ -93,20 +82,20 @@ function process(question){
 		}
 	}
 
-	if (question == 'q4'){
-		var submitted = $('input[name=q4]:checked').val();
-		if (submitted == sessionStorage.a4){
-			correctAns++;
-		}
-	}
+	// if (question == 'q4'){
+	// 	var submitted = $('input[name=q4]:checked').val();
+	// 	if (submitted == sessionStorage.a4){
+	// 		correctAns++;
+	// 	}
+	// }
 
-	if (question == 'q5'){
+	if (question == 'q4'){
 		var submitted = $('input[name=q5]:checked').val();
 		if (submitted == sessionStorage.a5){
 			correctAns++;
 		}
 
-		$('#results').html('<h3>Your final score is: ' + correctAns + ' out of 5</h3><a href="./test.html">Click here to start again</a>')
+		$('#results').html('<h3>Your final score is: ' + correctAns + ' out of '+totalQ+'</h3><a href="./test.html">Click here to start again</a>')
 	}
 	return false;
 	
