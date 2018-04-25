@@ -45,14 +45,6 @@
 
 		<script type="text/javascript">
       var svg = dimple.newSvg("#chartContainer", 590, 500);
-
-    	svg.append("text")
-    		.attr("x", (590/2 - 40))
-    		.attr("y", 15)
-    		.attr("text-anchor", "middle")
-    		.style("font-size", "18px")
-    		.style("font-family", "arial")
-    		.text("Grunty Gunner");
     	
     	d3.tsv("../b-dor/b_dor_air.com.gruntygunner.halodialogue.tsv", function (data) {
       

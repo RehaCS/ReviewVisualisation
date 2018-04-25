@@ -32,7 +32,7 @@
 		<!-- Placeholder for navBar which is loaded with jQuery -->
 	    <div id=nav-placeholder></div>
 
-		<h2 class="text-center my-5">Number of Reviews overtime</h2>
+		<h2 class="text-center my-5">Review Length</h2>
 
 		<div class="row">
       <div class="col-sm-12 col-md-12 col-lg-12"> 
@@ -46,7 +46,7 @@
 		<div id="chartContainer">
 			<script type="text/javascript">
 
-			var width = 3000;
+			var width = 4000;
 			
 			var svg = dimple.newSvg("#chartContainer",width,600);
 
@@ -55,7 +55,7 @@
 				var myChart = new dimple.chart(svg, data);
 				
 				myChart
-					.setBounds(75,30,2900,300); //Length width and location
+					.setBounds(75,30,3900,300); //Length width and location
 				
 				var y = myChart.addMeasureAxis("y","ReviewLength");
 				y.tickFormat = "0"

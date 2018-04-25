@@ -25,108 +25,297 @@
 
 	<div id="nav-placeholder"></div>
 
-	<div class="container">
-		<header class="text-center mt-5 mb-3 py-3 bg-secondary text-white"></header>
+	<div class="container-fluid">
+		<header class="text-center mt-5 mb-3 py-3 bg-secondary text-white">Which visualizations represent a benign application?</header>
 		
-		<main>
-			
-			<form id="q1" class="q-form" data-question="1">
-				<div style="margin: 0 auto; width: 100%">
-					<h4 my-3>1. Which visualization represents a benign application?</h4>
-					<figure class="figure">
-				    <img src="./images/QDiscoStackNOROT.png" class="figure-img img-fluid" width="500" alt="submit"/>
-				    <figcaption class="figure-caption text-center">Visualization 1</figcaption>
-				  </figure>
-				  <figure class="figure">
-				    <img src="./images/QFarmerHouseNOROT.png" class="figure-img img-fluid" width="500" alt="submit"/>
-				    <figcaption class="figure-caption text-center">Visualization 2</figcaption>
-				  </figure>
-				</div>
+	<main class="qForms">
+			<form class="questionForm" id="q1" data-question="1">
+				<!-- <h3 class="text-center">1. Which visualization is benign?</h3> -->
+				<div class="row">
+		      <div class="col-sm-12 col-md-6 col-lg-6 text-center"> 
+		      	<img src='./images/TestImages/BGlitcher.png' alt='missing' style="width: 82%" />
+		        <h6 class=" text-center">Glitcher</h6>
+		      </div>
+		      <div class="col-sm-12 col-md-6 col-lg-6"> 
+		      	<img src='./images/TestImages/FNetworkSearch.png' alt='missing' style="width: 100%" />
+		        <h6 class=" text-center">Network Search</h6> 
+		      </div>     
+		    </div>
 				<ul>
-					<li><input type="radio" name="q1" value="a"/> Visualization 1 </li>
-					<li><input type="radio" name="q1" value="b"/> Visualization 2 </li>
+					<li><input name="q1" type="radio" value="a" />Glitcher</li>
+					<li><input name="q1" type="radio" value="b" />Network Search</li>
 				</ul>
-				<button id="submit" class="my-3">Submit</button>
+				<button id="submit">Submit</button>
 			</form>
 			
-			<form id="q2" class="q-form" data-question="2">
-				<div style="margin: 0 auto; width: 100%">
-					<h6>2. Which visualization is benign</h6>
-					<figure class="figure">
-				    <img src="./images/QFarmerHouseDOR.png" class="figure-img img-fluid" width="500" alt="submit"/>
-				    <figcaption class="figure-caption text-center">Visualization 1</figcaption>
-				  </figure>
-				  <figure class="figure">
-				    <img src="./images/QDiscoStackDOR.png" class="figure-img img-fluid" width="500" alt="submit"/>
-				    <figcaption class="figure-caption text-center">Visualization 2</figcaption>
-				  </figure>
-				</div>
+			<form class="questionForm" id="q2" data-question="2">
+				<!-- <h3 class="text-center">2. Which visualization is benign?</h3> -->
+				<div class="row">
+		      <div class="col-sm-12 col-md-6 col-lg-6 text-center"> 
+		      	<img src='./images/TestImages/BWearMaps.png' alt='missing' style="width: 90%" />
+		        <h6 class=" text-center">WearMaps</h6>
+		      </div>
+		      <div class="col-sm-12 col-md-6 col-lg-6"> 
+		      	<img src='./images/TestImages/FPrayerBook.png' alt='missing' style="width: 100%" />
+		        <h6 class=" text-center">PrayerBook</h6> 
+		      </div>     
+		    </div>
 				<ul>
-					<li><input type="radio" name="q2" value="a"/> Visualization 1 </li>
-					<li><input type="radio" name="q2" value="b"/> Visualization 2 </li>
+					<li><input name="q2" type="radio" value="a" />WearMaps</li>
+					<li><input name="q2" type="radio" value="b" />PrayerBook</li>
 				</ul>
-				<button id="submit" class="my-3">Submit</button>
+				<button id="submit">Submit</button>
+			</form>
+			
+			<form class="questionForm" id="q3" data-question="3">
+				<!-- <h3 class="text-center">3. Which visualization is benign?</h3> -->
+				<div class="row">
+		      <div class="col-sm-12 col-md-6 col-lg-6 text-center"> 
+		      	<img src='./images/TestImages/FFurbyAndroid.png' alt='missing' style="width: 100%" />
+		        <h6 class=" text-center">Furby Android</h6>
+		      </div>
+		      <div class="col-sm-12 col-md-6 col-lg-6"> 
+		      	<img src='./images/TestImages/BMoneyMine.png' alt='missing' style="width: 87%" />
+		        <h6 class=" text-center">Money Mine</h6> 
+		      </div>     
+		    </div>
+				<ul>
+					<li><input name="q3" type="radio" value="a" />Furby Android</li>
+					<li><input name="q3" type="radio" value="b" />Money Mine</li>
+				</ul>
+				<button id="submit">Submit</button>
+			</form>
+			
+			<form class="questionForm" id="q4" data-question="4">
+				<!-- <h3 class="text-center">4. Which visualization is benign?</h3> -->
+				<div class="row">
+		      <div class="col-sm-12 col-md-6 col-lg-6 text-center"> 
+		      	<img src='./images/TestImages/BOrlandoResort.png' alt='missing' style="width: 100%" />
+		        <h6 class=" text-center">Orlando Resorts</h6>
+		      </div>
+		      <div class="col-sm-12 col-md-6 col-lg-6"> 
+		      	<img src='./images/TestImages/FNeverSlave.png' alt='missing' style="width: 100%" />
+		        <h6 class=" text-center">Never Slave</h6> 
+		      </div>     
+		    </div>
+				<ul>
+					<li><input name="q4" type="radio" value="a" />Orlando Resort</li>
+					<li><input name="q4" type="radio" value="b" />Never Slave</li>
+				</ul>
+				<button id="submit">Submit</button>
+			</form>
+			
+			<form class="questionForm" id="q5" data-question="5">
+				<!-- <h3 class="text-center">5. Which visualization is benign?</h3> -->
+				<div class="row">
+		      <div class="col-sm-12 col-md-6 col-lg-6 text-center"> 
+		      	<img src='./images/TestImages/BFarmerHouse.png' alt='missing' style="width: 82%" />
+		        <h6 class=" text-center">Farmer House</h6>
+		      </div>
+		      <div class="col-sm-12 col-md-6 col-lg-6"> 
+		      	<img src='./images/TestImages/FWifiScan.png' alt='missing' style="width: 98%" />
+		        <h6 class=" text-center">Wifi Scan</h6> 
+		      </div>     
+		    </div>
+				<ul>
+					<li><input name="q5" type="radio" value="a" />Farmer House</li>
+					<li><input name="q5" type="radio" value="b" />Wifi Scan</li>
+				</ul>
+				<button id="submit">Submit</button>
 			</form>
 
-			<form id="q3" class="q-form" data-question="3">
-				<div style="margin: 0 auto; width: 100%">
-					<h6 class="my-3">3. Which visualization represents a benign application?</h6>
-					<figure class="figure">
-				    <img src="./images/QHotDfsRL.png" class="figure-img img-fluid" width="500" alt="submit"/>
-				    <figcaption class="figure-caption text-center">Visualization 1</figcaption>
-				  </figure>
-				  <figure class="figure">
-				    <img src="./images/QSpiderPrankRL.png" class="figure-img img-fluid" width="500" alt="submit"/>
-				    <figcaption class="figure-caption text-center">Visualization 2</figcaption>
-				  </figure>
-				</div>
+			<form class="questionForm" id="q6" data-question="6">
+				<!-- <h3 class="text-center">5. Which visualization is benign?</h3> -->
+				<div class="row">
+		      <div class="col-sm-12 col-md-6 col-lg-6 text-center"> 
+		      	<img src='./images/TestImages/FDinoHunter.png' alt='missing' style="width: 100%" />
+		        <h6 class=" text-center">Dino Hunter</h6>
+		      </div>
+		      <div class="col-sm-12 col-md-6 col-lg-6"> 
+		      	<img src='./images/TestImages/BAndroid.png' alt='missing' style="width: 82%" />
+		        <h6 class=" text-center">Android</h6> 
+		      </div>     
+		    </div>
 				<ul>
-					<li><input type="radio" name="q3" value="a"/> Visualization 1 </li>
-					<li><input type="radio" name="q3" value="b"/> Visualization 2 </li>
+					<li><input name="q6" type="radio" value="a" />Dino Hunter</li>
+					<li><input name="q6" type="radio" value="b" />Android</li>
 				</ul>
-				<button id="submit" class="my-3">Submit</button>
+				<button id="submit">Submit</button>
 			</form>
 
-			<form id="q4" class="q-form" data-question="4">
-				<div style="margin: 0 auto; width: 100%">
-					<h6>4. Which visualization is benign</h6>
-					<figure class="figure">
-				    <img src="./images/wordCloud.png" class="figure-img img-fluid" width="500" alt="submit"/>
-				    <figcaption class="figure-caption text-center">Visualization 1</figcaption>
-				  </figure>
-				  <figure class="figure">
-				    <img src="./images/wordCloud.png" class="figure-img img-fluid" width="500" alt="submit"/>
-				    <figcaption class="figure-caption text-center">Visualization 2</figcaption>
-				  </figure>
-				</div>
+			<form class="questionForm" id="q7" data-question="7">
+				<!-- <h3 class="text-center">5. Which visualization is benign?</h3> -->
+				<div class="row">
+		      <div class="col-sm-12 col-md-6 col-lg-6 text-center"> 
+		      	<img src='./images/TestImages/FWholeQuran.png' alt='missing' style="width: 95%" />
+		        <h6 class=" text-center">WholeQuran</h6>
+		      </div>
+		      <div class="col-sm-12 col-md-6 col-lg-6"> 
+		      	<img src='./images/TestImages/BSuntoll.png' alt='missing' style="width: 100%" />
+		        <h6 class=" text-center">Suntoll</h6> 
+		      </div>     
+		    </div>
 				<ul>
-					<li><input type="radio" name="q4" value="a"/> Visualization 1 </li>
-					<li><input type="radio" name="q4" value="b"/> Visualization 2 </li>
+					<li><input name="q7" type="radio" value="a" />WholeQuran</li>
+					<li><input name="q7" type="radio" value="b" />Suntoll</li>
 				</ul>
-				<button id="submit" class="my-3">Submit</button>
+				<button id="submit">Submit</button>
 			</form>
 
-			<!-- <form id="q5" class="q-form" ata-question="5">
-				<div style="margin: 0 auto; width: 100%">
-					<h6>5. Which visualization is benign</h6>
-					<figure class="figure">
-				    <img src="./images/wordCloud.png" class="figure-img img-fluid" width="500" alt="submit"/>
-				    <figcaption class="figure-caption text-center">Visualization 1</figcaption>
-				  </figure>
-				  <figure class="figure">
-				    <img src="./images/wordCloud.png" class="figure-img img-fluid" width="500" alt="submit"/>
-				    <figcaption class="figure-caption text-center">Visualization 2</figcaption>
-				  </figure>
-				</div>
+			<form class="questionForm" id="q8" data-question="8">
+				<!-- <h3 class="text-center">5. Which visualization is benign?</h3> -->
+				<div class="row">
+		      <div class="col-sm-12 col-md-6 col-lg-6 text-center"> 
+		      	<img src='./images/TestImages/BGraveBound.png' alt='missing' style="width: 80%" />
+		        <h6 class=" text-center">Grave Bound</h6>
+		      </div>
+		      <div class="col-sm-12 col-md-6 col-lg-6"> 
+		      	<img src='./images/TestImages/FDuasAzkar.png' alt='missing' style="width: 100%" />
+		        <h6 class=" text-center">Duas Azkar</h6> 
+		      </div>     
+		    </div>
 				<ul>
-					<li><input type="radio" name="q5" value="a"/> Visualization 1 </li>
-					<li><input type="radio" name="q5" value="b"/> Visualization 2 </li>
+					<li><input name="q8" type="radio" value="a" />Grave Bound</li>
+					<li><input name="q8" type="radio" value="b" />Duas Azkar</li>
 				</ul>
-				<button id="submit" class="my-3">Submit</button>
-			</form> -->
-
-			<div id="results" class="my-2"></div>
-
+				<button id="submit">Submit</button>
+			</form>
+			
+			<form class="questionForm" id="q9" data-question="9">
+				<!-- <h3 class="text-center">5. Which visualization is benign?</h3> -->
+				<div class="row">
+					<div class="col-sm-12 col-md-6 col-lg-6"> 
+		      	<img src='./images/TestImages/FMobilender.png' alt='missing' style="width: 100%" />
+		        <h6 class=" text-center">Mobile Ender</h6> 
+		      </div> 
+		      <div class="col-sm-12 col-md-6 col-lg-6 text-center"> 
+		      	<img src='./images/TestImages/BStocks.png' alt='missing' style="width: 80%" />
+		        <h6 class=" text-center">Stocks</h6>
+		      </div>     
+		    </div>
+				<ul>
+					<li><input name="q9" type="radio" value="a" />Mobile Ender</li>
+					<li><input name="q9" type="radio" value="b" />Stocks</li>
+				</ul>
+				<button id="submit">Submit</button>
+			</form>
+			
+			<form class="questionForm" id="q10" data-question="10">
+				<!-- <h3 class="text-center">5. Which visualization is benign?</h3> -->
+				<div class="row">
+		      <div class="col-sm-12 col-md-6 col-lg-6 text-center"> 
+		      	<img src='./images/TestImages/BPlanetCracker.png' alt='missing' style="width: 82%" />
+		        <h6 class=" text-center">Planet Cracker</h6>
+		      </div>
+		      <div class="col-sm-12 col-md-6 col-lg-6"> 
+		      	<img src='./images/TestImages/FBengali.png' alt='missing' style="width: 92%" />
+		        <h6 class=" text-center">Bengali ABC</h6> 
+		      </div>     
+		    </div>
+				<ul>
+					<li><input name="q10" type="radio" value="a" />Planet Cracker</li>
+					<li><input name="q10" type="radio" value="b" />Bengali ABC</li>
+				</ul>
+				<button id="submit">Submit</button>
+			</form>
+			
+			<form class="questionForm" id="q11" data-question="11">
+				<!-- <h3 class="text-center">5. Which visualization is benign?</h3> -->
+				<div class="row">
+		      <div class="col-sm-12 col-md-6 col-lg-6 text-center"> 
+		      	<img src='./images/TestImages/FHrApps.png' alt='missing' style="width: 100%" />
+		        <h6 class=" text-center">HR Apps</h6>
+		      </div>
+		      <div class="col-sm-12 col-md-6 col-lg-6"> 
+		      	<img src='./images/TestImages/BCornerStone.png' alt='missing' style="width: 82%" />
+		        <h6 class=" text-center">Corner Stone</h6> 
+		      </div>     
+		    </div>
+				<ul>
+					<li><input name="q11" type="radio" value="a" />HR Apps</li>
+					<li><input name="q11" type="radio" value="b" />Corner Stone</li>
+				</ul>
+				<button id="submit">Submit</button>
+			</form>
+			
+			<form class="questionForm" id="q12" data-question="12">
+				<!-- <h3 class="text-center">5. Which visualization is benign?</h3> -->
+				<div class="row">
+		      <div class="col-sm-12 col-md-6 col-lg-6 text-center"> 
+		      	<img src='./images/TestImages/BVrDeveloper.png' alt='missing' style="width: 100%" />
+		        <h6 class=" text-center">VR Developer</h6>
+		      </div>
+		      <div class="col-sm-12 col-md-6 col-lg-6"> 
+		      	<img src='./images/TestImages/FFingerprintDetector.png' alt='missing' style="width: 100%" />
+		        <h6 class=" text-center">Fingerprint Detector</h6> 
+		      </div>     
+		    </div>
+				<ul>
+					<li><input name="q12" type="radio" value="a" />VR Developer</li>
+					<li><input name="q12" type="radio" value="b" />Fingerprint Detector</li>
+				</ul>
+				<button id="submit">Submit</button>
+			</form>
+			
+			<form class="questionForm" id="q13" data-question="13">
+				<!-- <h3 class="text-center">5. Which visualization is benign?</h3> -->
+				<div class="row">
+		      <div class="col-sm-12 col-md-6 col-lg-6 text-center"> 
+		      	<img src='./images/TestImages/BHotDfs.png' alt='missing' style="width: 87%" />
+		        <h6 class=" text-center">Hot DFS</h6>
+		      </div>
+		      <div class="col-sm-12 col-md-6 col-lg-6"> 
+		      	<img src='./images/TestImages/FGestureControl.png' alt='missing' style="width: 100%" />
+		        <h6 class=" text-center">Gesture Control</h6> 
+		      </div>     
+		    </div>
+				<ul>
+					<li><input name="q13" type="radio" value="a" />Hot DFS</li>
+					<li><input name="q13" type="radio" value="b" />Gesture Control</li>
+				</ul>
+				<button id="submit">Submit</button>
+			</form>
+			
+			<form class="questionForm" id="q14" data-question="14">
+				<!-- <h3 class="text-center">5. Which visualization is benign?</h3> -->
+				<div class="row">
+		      <div class="col-sm-12 col-md-6 col-lg-6 text-center"> 
+		      	<img src='./images/TestImages/FDiscoStack.png' alt='missing' style="width: 98%" />
+		        <h6 class=" text-center">Disco Stack</h6>
+		      </div>
+		      <div class="col-sm-12 col-md-6 col-lg-6"> 
+		      	<img src='./images/TestImages/BGrrificFeelings.png' alt='missing' style="width: 82%" />
+		        <h6 class=" text-center">Grrific Feelingd</h6> 
+		      </div>     
+		    </div>
+				<ul>
+					<li><input name="q14" type="radio" value="a" />Disco Stack</li>
+					<li><input name="q14" type="radio" value="b" />Grrific Feelings</li>
+				</ul>
+				<button id="submit">Submit</button>
+			</form>
+			
+			<form class="questionForm" id="q15" data-question="15">
+				<!-- <h3 class="text-center">5. Which visualization is benign?</h3> -->
+				<div class="row">
+		      <div class="col-sm-12 col-md-6 col-lg-6 text-center"> 
+		      	<img src='./images/TestImages/BPbsKids.png' alt='missing' style="width: 82%" />
+		        <h6 class=" text-center">PBS Kids</h6>
+		      </div>
+		      <div class="col-sm-12 col-md-6 col-lg-6"> 
+		      	<img src='./images/TestImages/FWorkoutRoutine.png' alt='missing' style="width: 99%" />
+		        <h6 class=" text-center">Workout Routine</h6> 
+		      </div>     
+		    </div>
+				<ul>
+					<li><input name="q15" type="radio" value="a" />PBS Kids</li>
+					<li><input name="q15" type="radio" value="b" />Workout Routine</li>
+				</ul>
+				<button id="submit">Submit</button>
+			</form>
+			
+			<div id="results"></div>
+			<br>
 		</main>
 
 		<footer class="text-center mt-3 py-3 bg-secondary text-white"></footer>

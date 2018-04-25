@@ -22,7 +22,7 @@
 		#chartContainer{
 			width: 100wv;
 			overflow-x: scroll;
-			width: 600px; margin: 0 auto;
+			width: 800px; margin: 0 auto;
 		}
 	</style>
 
@@ -38,7 +38,7 @@
 		<div id="chartContainer">
 			<script type="text/javascript">
 
-			var width = 600;
+			var width = 700;
 			
 			var svg = dimple.newSvg("#chartContainer",width,500);
 			svg.append("text")
@@ -55,10 +55,11 @@
 				var myChart = new dimple.chart(svg, data);
 				
 				myChart
-					.setBounds(75,30,500,330); //Length width and location
+					.setBounds(75,30,600,330); //Length width and location
 				
-				myChart
-				 	.addMeasureAxis("y","NumberOfReviews");
+				var y = myChart
+				 	.addMeasureAxis("y","NumberOfReviews"); 
+				 	// y.overrideMax = 30
 
 				var x = myChart.addCategoryAxis("x", "ReviewDate");
 				x.addOrderRule("ReviewDate");
