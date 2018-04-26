@@ -17,7 +17,7 @@ function init(){
 	sessionStorage.setItem('a10','a');
 	sessionStorage.setItem('a11','b');
 	sessionStorage.setItem('a12','a');
-	sessionStorage.setItem('a13','b');
+	sessionStorage.setItem('a13','a');
 	sessionStorage.setItem('a14','b');
 	sessionStorage.setItem('a15','a');
 }
