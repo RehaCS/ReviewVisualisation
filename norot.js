@@ -8,7 +8,6 @@
         'Real/EscapeUnderground',
         'Real/DeepUnder',
         'Real/LibraryEscape',
-        'Real/FarmerHouse',
         'Real/Pixelolite',
         'Real/SplillsAndThrills',
         'Real/OneEyedJack',
@@ -43,7 +42,6 @@
       // Fake norot
         'Fake/CreativeCodeApps',
         'Fake/AirBalooncs',
-        'Fake/DiscoStack',
         'Fake/MessyRoom',
         'Fake/RoyalHaircut',
         'Fake/CutePonyCares',
@@ -88,11 +86,11 @@
       
 
       $(document).ready(function() {
-        for (var i = 0; i < 38; i++) {
+        for (var i = 0; i < 37; i++) {
           clickImage('.realClickableImage', x[i]);
         }
 
-        for (var i = 38; i < x.length; i++) {
+        for (var i = 37; i < x.length; i++) {
           clickImage('.fakeClickableImage', x[i]);
         }
 

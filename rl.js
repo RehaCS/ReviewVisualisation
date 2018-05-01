@@ -7,8 +7,6 @@
     'Real/escapegothicvamp',
     'Real/escapeunderground',
     'Real/deepunder',
-    'Real/libraryescape',
-    'Real/farmerhouse',
     'Real/pixelolite',
     'Real/splillsandthrills',
     'Real/oneeyedjack',
@@ -47,7 +45,6 @@
 
     'Fake/creativecodeapps',
     'Fake/airbalooncs',
-    'Fake/discostack',
     'Fake/messyroom',
     'Fake/royalhaircuts',
     'Fake/cuteponycares',
@@ -99,7 +96,6 @@
     'Real/escapeunderground',
     'Real/deepunder',
     'Real/libraryescape',
-    'Real/farmerhouse',
     'Real/pixelolite',
     'Real/splillsandthrills',
     'Real/oneeyedjack',
@@ -137,7 +133,6 @@
 
     'Fake/creativecodeapps',
     'Fake/airbalooncs',
-    'Fake/discostack',
     'Fake/messyroom',
     'Fake/royalhaircuts',
     'Fake/cuteponycares',
@@ -180,11 +175,11 @@
     ];
 
     $(document).ready(function(){
-      for (var i = 0; i < 42; i++){
+      for (var i = 0; i < 41; i++){
         clickImage('.realClickableImage',x[i],y[i]);
       }
 
-      for(var i = 42; i <x.length; i++){
+      for(var i = 41; i <x.length; i++){
         clickImage('.fakeClickableImage', x[i], y[i]);
       }
     });

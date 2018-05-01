@@ -6,7 +6,6 @@
     'HTMLReal/wcEscapeUnderground',
     'HTMLReal/wcDeepUnder',
     'HTMLReal/wcLibraryEscape',
-    'HTMLReal/wcFarmerHouse',
     'HTMLReal/wcPixelolite',
     'HTMLReal/wcSplillsAndThrills',
     'HTMLReal/wcBuzzmark',
@@ -49,7 +48,6 @@
 
     'HTMLFake/wcCreativeCodeApps',
     'HTMLFake/wcAirBalooncs',
-    'HTMLFake/wcDiscoStack',
     'HTMLFake/wcMessyRoom',
     'HTMLFake/wcRoyalHaircut',
     'HTMLFake/wcCutePonyCares',
@@ -102,7 +100,6 @@
     'b-wc/EscapeUnderground',
     'b-wc/DeepUnder',
     'b-wc/LibraryEscape',
-    'b-wc/FarmerHouse',
     'b-wc/Pixelolite',
     'b-wc/SplillsAndThrills',
     'b-wc/Buzzmark',
@@ -145,7 +142,6 @@
 
     'f-wc/CreativeCodeApps',
     'f-wc/AirBalooncs',
-    'f-wc/DiscoStack',
     'f-wc/MessyRoom',
     'f-wc/RoyalHaircuts',
     'f-wc/CutePonyCares',
@@ -192,11 +188,11 @@
     ];
 
     $(document).ready(function(){
-      for(var i = 0; i<46;i++){
+      for(var i = 0; i<45;i++){
         ClickImage('.realClickableImage',href[i],src[i]);
       }
 
-      for(var i = 46; i<href.length;i++){
+      for(var i = 45; i<href.length;i++){
         ClickImage('.fakeClickableImage',href[i],src[i]);
       }
 

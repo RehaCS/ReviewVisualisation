@@ -8,7 +8,6 @@
     'Real/escapeUnderground',
     'Real/deepUnder',
     'Real/libraryEscape',
-    'Real/farmerHouse',
     'Real/pixelolite',
     'Real/splillsAndThrills',
     'Real/sneakyFox',
@@ -46,12 +45,10 @@
     //href FAKE
     'Fake/creativeCodeApps',
     'Fake/airBalooncs',
-    'Fake/discoStack',
     'Fake/messyRoom',
     'Fake/royalHaircut',
     'Fake/cutePonyCares',
     'Fake/cutePony',
-    'Fake/armShooting',
     'Fake/punisherShooting',
     'Fake/soldierOnDuty',
     'Fake/mahjong',
@@ -87,16 +84,15 @@
     'Fake/estradaovelha',
     'Fake/mwcEasy',
     'Fake/cathieApp',
-    'Fake/goodAndroid',
     'Fake/superDuck'
     ];
 
     $(document).ready(function(){
-      for (var i = 0; i < 42; i++){
+      for (var i = 0; i < 41; i++){
         clickImage('.realClickableImage',x[i]);
       }
 
-      for(var i = 42; i <x.length; i++){
+      for(var i = 41; i <x.length; i++){
         clickImage('.fakeClickableImage', x[i]);
       }
     });
