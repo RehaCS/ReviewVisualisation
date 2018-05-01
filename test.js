@@ -1,4 +1,4 @@
-//https://www.youtube.com/watch?v=oLH4uQzbNxI&index=39&list=PLDmvslp_VR0wkiclky6vj6SSDx-N2QE9z
+//Code reused from https://www.youtube.com/watch?v=oLH4uQzbNxI&index=39&list=PLDmvslp_VR0wkiclky6vj6SSDx-N2QE9z
 var correctAns = 0;
 var totalQ = 15;
 
@@ -30,55 +30,20 @@ $(document).ready(function (){
 	$('#q1').show();
 
 	$('.questionForm #submit').click(function(){
-		current = $(this).parents('form:first').data('question');
-		next = $(this).parents('form:first').data('question')+1 ;
+		currentQ = $(this).parents('form:first').data('question');
+		nextQ = $(this).parents('form:first').data('question')+1 ;
 		$('.questionForm').hide();
-		$('#q' + next +'').fadeIn(300);
-		process('' + current + '');
+		$('#q' + nextQ +'').fadeIn(300);
+		process('' + currentQ + '');
 		return false;
 
-		if (current == 5){
+		if (currentQ == 5){
 		$('.questionForm').hide();
 		$('#results').fadeIn(300);
-		process('' + current + '');
+		process('' + currentQ + '');
 		return false;
 		}
 	});
-
-	// $('#q1 #submit').click(function(){
-	// 	$('.q-form').hide();
-	// 	process('q1');
-	// 	$('#q2').fadeIn(300);
-	// 	return false;
-	// });
-
-	// $('#q2 #submit').click(function(){
-	// 	$('.q-form').hide();
-	// 	process('q2');
-	// 	$('#q3').fadeIn(300);
-	// 	return false;
-	// });
-
-	// $('#q3 #submit').click(function(){
-	// 	$('.q-form').hide();
-	// 	process('q3');
-	// 	$('#q4').fadeIn(300);
-	// 	return false;
-	// });
-
-	// $('#q4 #submit').click(function(){
-	// 	$('.q-form').hide();
-	// 	process('q4');
-	// 	$('#q5').fadeIn(300);
-	// 	return false;
-	// });
-
-	// $('#q5 #submit').click(function(){
-	// 	$('.q-form').hide();
-	// 	process('q5');
-	// 	$('#results').fadeIn(300);
-	// 	return false;
-	// });
 
 });
 
@@ -95,43 +60,6 @@ function process(n){
 		$('#results').html('<h3>Your final score is: ' + correctAns + ' out of '+totalQ+'</h3><a href="./test.html">Click here to start again</a>')
 	}
 
-
-	// if (question == 'q1'){
-	// 	var submitted = $('input[name=q1]:checked').val();
-	// 	if (submitted == sessionStorage.a1){
-	// 		correctAns++;
-	// 	}
-	// }
-
-	// if (question == 'q2'){
-	// 	var submitted = $('input[name=q2]:checked').val();
-	// 	if (submitted == sessionStorage.a2){
-	// 		correctAns++;
-	// 	}
-	// }
-
-	// if (question == 'q3'){
-	// 	var submitted = $('input[name=q3]:checked').val();
-	// 	if (submitted == sessionStorage.a3){
-	// 		correctAns++;
-	// 	}
-	// }
-
-	// if (question == 'q4'){
-	// 	var submitted = $('input[name=q4]:checked').val();
-	// 	if (submitted == sessionStorage.a4){
-	// 		correctAns++;
-	// 	}
-	// }
-
-	// if (question == 'q5'){
-	// 	var submitted = $('input[name=q4]:checked').val();
-	// 	if (submitted == sessionStorage.a5){
-	// 		correctAns++;
-	// 	}
-
-	// 	$('#results').html('<h3>Your final score is: ' + correctAns + ' out of '+totalQ+'</h3><a href="./test.html">Click here to start again</a>')
-	// }
 	return false;
 	
 }

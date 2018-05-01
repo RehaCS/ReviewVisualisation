@@ -2,5 +2,5 @@
 
 URL: https://acnh436.github.io/ReviewVisualisation/
 
-To deploy locally, navigate to ReviewVisualisation folder in the terminal, open a simple server by typing ' pythom -m SimpleHTTPServer '.
+To run locally, navigate to ReviewVisualisation folder in the terminal, open a simple server by typing ' pythom -m SimpleHTTPServer '.
 Open chrome and type localhost:port e.g. localhost:8000
