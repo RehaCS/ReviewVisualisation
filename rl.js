@@ -175,11 +175,11 @@
     ];
 
     $(document).ready(function(){
-      for (var i = 0; i < 41; i++){
+      for (var i = 0; i < 40; i++){
         clickImage('.realClickableImage',x[i],y[i]);
       }
 
-      for(var i = 41; i <x.length; i++){
+      for(var i = 40; i <x.length; i++){
         clickImage('.fakeClickableImage', x[i], y[i]);
       }
     });
