@@ -44,7 +44,6 @@ $(document).ready(function (){
 		return false;
 		}
 	});
-
 });
 
 //process answers
