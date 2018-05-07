@@ -115,7 +115,7 @@
     'b-wc/GPlayPremium2',
     'b-wc/StraySouls',
     'b-wc/LocalRegister',
-    'b-wc/BrightNest', //name changed 
+    'b-wc/Brightnest', //name changed 
     'b-wc/Impossible',
     'b-wc/ForChromeCast',
     'b-wc/KungFuMan',
